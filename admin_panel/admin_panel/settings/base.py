@@ -141,7 +141,7 @@ LOGGING = {
         },
         "webhook": {"level": logging.INFO, "class": "admin_panel.logging.WebhookHandler"},
         "django.server": {"level": logging.INFO, "class": "logging.StreamHandler", "formatter": "django.server"},
-        "queue": {"class": "logging.handlers.QueueHandler", "handlers": ["console", "file", "webhook"]},
+        "queue": {"class": "logging.handlers.QueueHandler"},
     },
     "loggers": {
         "root": {"handlers": ["queue", "buffer"], "level": logging.INFO},
